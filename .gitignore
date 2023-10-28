@@ -3,6 +3,7 @@ pom.xml.asc
 *.jar
 *.class
 /node_modules/
+.shadow-cljs/
 /lib/
 /classes/
 /target/
