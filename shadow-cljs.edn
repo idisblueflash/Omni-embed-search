@@ -1,0 +1,17 @@
+;; shadow-cljs configuration
+{:nrepl
+ {:port 8777}
+
+ :deps
+ {:aliases [:cljs]}
+
+ :source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ []
+
+ :builds
+ {}}

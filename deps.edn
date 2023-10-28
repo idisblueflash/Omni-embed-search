@@ -1,0 +1,44 @@
+{:paths ["src"]
+ :deps
+ {thheller/shadow-cljs           {:mvn/version "2.17.8"}
+  com.google.guava/guava         {:mvn/version "31.0.1-jre"}
+  org.clojure/clojure            {:mvn/version "1.10.3"}
+  data.deque/data.deque          {:mvn/version "0.1.0"}
+  org.postgresql/postgresql      {:mvn/version "9.3-1102-jdbc41"}
+  ring-cors/ring-cors            {:mvn/version "0.1.13"}
+  nano-id                        {:mvn/version "1.0.0"}
+  net.cgrand/macrovich           {:mvn/version "0.2.1"}
+  nrepl                          {:mvn/version "0.6.0"}
+  cider/cider-nrepl              {:mvn/version "0.26.0"}
+  markdown-to-hiccup             {:mvn/version "0.6.2"}
+  org.clojure/tools.logging      {:mvn/version "1.1.0"}
+  datascript                     {:mvn/version "1.2.2"}
+  datascript-transit             {:mvn/version "0.3.0"}
+  instaparse                     {:mvn/version "1.4.10"}
+  metosin/komponentit            {:mvn/version "0.3.10"}
+  day8/shadow-git-inject         {:mvn/version "0.0.5"}
+  mount                          {:mvn/version "0.1.16"}
+  ring                           {:mvn/version "1.9.4"}
+  ring-middleware-format         {:mvn/version "0.7.4"}
+  clojure.java-time              {:mvn/version "0.3.2"}
+  com.cognitect/transit-clj      {:mvn/version "1.0.333"}
+  clj-time                       {:mvn/version "0.15.2"}
+  clj-http                       {:mvn/version "3.10.0"}
+  metosin/reitit                 {:mvn/version "0.5.5"}
+  org.clojure/core.async         {:mvn/version "1.5.648"}
+  bk/ring-gzip                   {:mvn/version "0.3.0"}
+  com.taoensso/timbre            {:mvn/version "4.10.0"}
+  info.sunng/ring-jetty9-adapter {:mvn/version "0.12.5"}
+  metosin/ring-http-response     {:mvn/version "0.9.1"}
+  ring/ring-json                 {:mvn/version "0.3.1"}
+  org.clojure/data.xml           {:mvn/version "0.0.8"}
+  buddy/buddy-sign               {:mvn/version "3.4.1"}
+  buddy/buddy-auth               {:mvn/version "3.0.1"}
+  com.draines/postal             {:mvn/version "2.0.4"}
+  }
+ :infer-externs true
+
+ :aliases
+ {:shadow
+  {:main-opts ["-m" "shadow.cljs.devtools.cli"]}}
+ }
