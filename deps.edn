@@ -4,19 +4,13 @@
  :deps
  {thheller/shadow-cljs                  {:mvn/version "2.17.8"}
   org.clojure/clojure                   {:mvn/version "1.10.3"}
-  org.postgresql/postgresql             {:mvn/version "9.3-1102-jdbc41"}
   nrepl/nrepl                           {:mvn/version "0.6.0"}
   cider/cider-nrepl                     {:mvn/version "0.26.0"}
   datascript/datascript                 {:mvn/version "1.2.2"}
   datascript-transit/datascript-transit {:mvn/version "0.3.0"}
   mount/mount                           {:mvn/version "0.1.16"}
   com.cognitect/transit-clj             {:mvn/version "1.0.333"}
-  clj-time/clj-time                     {:mvn/version "0.15.2"}
-  clj-http/clj-http                     {:mvn/version "3.10.0"}
-  metosin/reitit                        {:mvn/version "0.5.5"}
   org.clojure/core.async                {:mvn/version "1.5.648"}
-  info.sunng/ring-jetty9-adapter        {:mvn/version "0.12.5"}
-  ring/ring-json                        {:mvn/version "0.3.1"}
   }
  :infer-externs true
 
