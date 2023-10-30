@@ -1,0 +1,20 @@
+{:paths         ["src/dev"
+                 "src/main"
+                 "src/test"]
+ :deps
+ {thheller/shadow-cljs                  {:mvn/version "2.17.8"}
+  org.clojure/clojure                   {:mvn/version "1.10.3"}
+  nrepl/nrepl                           {:mvn/version "0.6.0"}
+  cider/cider-nrepl                     {:mvn/version "0.26.0"}
+  datascript/datascript                 {:mvn/version "1.2.2"}
+  datascript-transit/datascript-transit {:mvn/version "0.3.0"}
+  mount/mount                           {:mvn/version "0.1.16"}
+  com.cognitect/transit-clj             {:mvn/version "1.0.333"}
+  org.clojure/core.async                {:mvn/version "1.5.648"}
+  }
+ :infer-externs true
+
+ :aliases
+ {:shadow
+  {:main-opts ["-m" "shadow.cljs.devtools.cli"]}}
+ }
