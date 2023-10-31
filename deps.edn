@@ -15,6 +15,7 @@
  :infer-externs true
 
  :aliases
- {:shadow
-  {:main-opts ["-m" "shadow.cljs.devtools.cli"]}}
+ {:shadow {:main-opts ["-m" "shadow.cljs.devtools.cli"]}
+  :unit   {:extra-paths ["src/test"]
+           :main-opts   ["-m" "unit-test-runner"]}}
  }
