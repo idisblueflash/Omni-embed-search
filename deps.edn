@@ -11,6 +11,7 @@
   mount/mount                           {:mvn/version "0.1.16"}
   com.cognitect/transit-clj             {:mvn/version "1.0.333"}
   org.clojure/core.async                {:mvn/version "1.5.648"}
+  net.mikera/vectorz-clj                {:mvn/version "0.48.0"}
   }
  :infer-externs true
 
