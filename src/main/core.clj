@@ -18,9 +18,10 @@
 
 (defn search [embedded-question all-contents]
   (->> all-contents
-       (map #(assoc % :similarity
-                      (calculate-similarity embedded-question (:embedding %))))
+       (pmap #(assoc % :similarity
+                       (calculate-similarity embedded-question (:embedding %))))
        (sort-by (comp - :similarity))
-       (map #(select-keys % [:id :text :similarity] ))
+       (map #(select-keys % [:id :text :similarity]))
        (map #(assoc % :similarity (convert-and-round (:similarity %))))
-       (take 3)))
+       (take 3)
+       ))
