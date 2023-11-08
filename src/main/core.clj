@@ -3,9 +3,13 @@
 
 (m/set-current-implementation :vectorz)
 
-(defn fetch-all-contents [])
+(defn fetch-all-contents []
+  ;;TBD. need fetch from db of file
+  )
 
-(defn embedding-text [text])
+(defn embedding-text [text]
+  ;;TBD. need call Open AI API
+  )
 
 (defn calculate-similarity [embedding-a embedding-b]
   (m/dot embedding-a embedding-b))
