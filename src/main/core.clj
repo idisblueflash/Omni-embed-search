@@ -16,12 +16,11 @@
        (format "%.2f")
        (Double/parseDouble)))
 
-(defn search [question]
-  (let [question-embedding (embedding-text question)]
-    (->> (fetch-all-contents)
-         (map #(assoc % :similarity
-                        (calculate-similarity question-embedding (:embedding %))))
-         (sort-by (comp - :similarity))
-         (map #(select-keys % [:id :text :similarity] ))
-         (map #(assoc % :similarity (convert-and-round (:similarity %))))
-         (take 3))))
+(defn search [embedded-question all-contents]
+  (->> all-contents
+       (map #(assoc % :similarity
+                      (calculate-similarity embedded-question (:embedding %))))
+       (sort-by (comp - :similarity))
+       (map #(select-keys % [:id :text :similarity] ))
+       (map #(assoc % :similarity (convert-and-round (:similarity %))))
+       (take 3)))
