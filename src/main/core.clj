@@ -49,4 +49,5 @@ insert into address(name,email)
 
   (jdbc/execute! ds ["select * from address"])
 
+  ;; TODO: add honey.sql to deps.edn
   ,)
