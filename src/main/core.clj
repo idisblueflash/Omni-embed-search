@@ -29,3 +29,25 @@
        (map #(assoc % :similarity (convert-and-round (:similarity %))))
        (take 3)
        ))
+
+(comment
+  (require '[next.jdbc :as jdbc])
+  (def db {:dbtype "h2" :dbname "example"})
+  (def ds (jdbc/get-datasource db))
+
+  (jdbc/execute! ds ["
+create table address (
+  id int auto_increment primary key,
+  name varchar(32),
+  email varchar(255)
+)"])
+
+
+  (jdbc/execute! ds ["
+insert into address(name,email)
+  values('Sean Corfield','sean@corfield.org')"])
+
+  (jdbc/execute! ds ["select * from address"])
+
+  ;; TODO: add honey.sql to deps.edn
+  ,)
